@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "GintoNord";
+  src: url("/assets/fonts/ginto-bold-italic.otf");
+}
+@font-face {
+  font-family: "GintoLight";
+  src: url("/assets/fonts/ginto-light.otf");
+}
+@font-face {
+  font-family: "GintoLightItalic";
+  src: url("/assets/fonts/ginto-light-italic.otf");
+}

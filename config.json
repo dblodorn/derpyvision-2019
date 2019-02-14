@@ -1,0 +1,24 @@
+{
+  "wp_endpoint": "https://dmbk.io/wp-json/dmbk-io-api/v1/core",
+  "meta_defaults": {
+    "title": "DerpyVision",
+    "description": "🎨 DerpyVision, My vision + Your vision = FANTASIA => 👐",
+    "site_url": "",
+    "bgcolor": "#fff"
+  },
+  "mail_scrape": {
+    "mailchimp_url": ""
+  },
+  "fonts": [
+    "GintoNord",
+    "GintoLight",
+    "GintoLightItalic"
+  ],
+  "HEADER_MENU": [
+    {
+      "title": "contact",
+      "slug": "contact",
+      "is_home": false
+    }
+  ]
+}
