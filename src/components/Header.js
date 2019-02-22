@@ -1,17 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import { H1 } from './../styles/components'
+import Logo from './Logo'
 import { flexCenteredAll } from './../styles/mixins'
 import { meta_defaults } from './../../config.json'
 
-const Header = props => {
-  if (props.resizeState.window_width >= props.resizeState.breakpoints.desktop) {
-    return <HeaderWrapper><H1 id='title'>{meta_defaults.title}</H1></HeaderWrapper>
-  } else {
-    return <HeaderWrapper><H1 id='title'>{meta_defaults.title}</H1></HeaderWrapper>
-  }
-}
+const Header = props => 
+  <HeaderWrapper>
+    <Logo/>
+  </HeaderWrapper>
 
 export default connect(
   state => ({
