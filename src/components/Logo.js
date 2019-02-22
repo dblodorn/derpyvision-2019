@@ -12,12 +12,6 @@ export default props =>
             numOctaves="5" result="turbulence"/>
           <feDisplacementMap in2="turbulence" in="SourceGraphic"
             scale="50" xChannelSelector="R" yChannelSelector="G"/>
-          <feSpecularLighting result="specOut"
-            specularExponent="10" lightingColor="yellow">
-            <fePointLight x="10" y="15" z="200"/>
-          </feSpecularLighting>
-          <feComposite in="SourceGraphic" in2="specOut"
-            operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
           <feDropShadow dx="12" dy="20" stdDeviation="40"/>
         </filter>
       </defs>
