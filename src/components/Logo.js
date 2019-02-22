@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { absoluteCentered } from '../styles/mixins';
+import { absoluteCentered, animationFadeIn } from '../styles/mixins';
 
 export default props =>
   <LogoWrapper>
@@ -28,6 +28,7 @@ export default props =>
   </LogoWrapper>
 
 const LogoWrapper = styled.div`
+  ${animationFadeIn(1000, 250)}
   width: 65vw;
   height: 100%;
   position: relative;

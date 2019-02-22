@@ -30,13 +30,17 @@ style(type="text/css").
     pointer-events: none;
   }
   #nprogress .bar {
-    background: #000000;
+    background: #efcc2f; /* Old browsers */
+    background: -moz-linear-gradient(left, #efcc2f 0%, #2dd0ed 50%, #f2ab82 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #efcc2f 0%,#2dd0ed 50%,#f2ab82 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #efcc2f 0%,#2dd0ed 50%,#f2ab82 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efcc2f', endColorstr='#f2ab82',GradientType=1 ); /* IE6-9 */
     position: fixed;
     z-index: 10000;
     top: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 10px;
   }
   #nprogress .spinner {
     display: none;
