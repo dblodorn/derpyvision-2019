@@ -1,10 +1,10 @@
 {
-  "wp_endpoint": "https://dmbk.io/wp-json/dmbk-io-api/v1/core",
+  "wp_endpoint": "https://dmbk.network/wp-json/api/v1/data/",
   "meta_defaults": {
     "title": "DerpyVision",
     "description": "🎨 DerpyVision, My vision + Your vision = FANTASIA => 👐",
-    "site_url": "",
-    "bgcolor": "#fff"
+    "site_url": "https://derpy.vision",
+    "bgcolor": "#000000"
   },
   "mail_scrape": {
     "mailchimp_url": ""

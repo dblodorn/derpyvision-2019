@@ -22,7 +22,7 @@ export default () =>
         attributeName="scale"
         from="1000"
         to="10"
-        dur="10s"
+        dur="3s"
         repeatCount="0"
       />
       <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" filter={`url(#shadow)`}>

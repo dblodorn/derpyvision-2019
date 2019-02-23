@@ -7,7 +7,6 @@ import { meta_defaults } from './../../config.json'
 
 const Header = props => 
   <HeaderWrapper>
-    <Logo/>
   </HeaderWrapper>
 
 export default connect(

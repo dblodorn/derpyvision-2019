@@ -5,7 +5,7 @@ var gulp        = require('gulp'),
     watch       = require('gulp-watch'),
     config      = require('./deploy.json');
 
-var watchFolder = './foundation-api/**/*';
+var watchFolder = './derpy-api/**/*';
 
 /* Task Library - API */
 gulp.task('api', function() {

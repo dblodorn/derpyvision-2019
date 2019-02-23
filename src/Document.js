@@ -1,25 +1,23 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import styled, { createGlobalStyle } from 'styled-components'
 import { flexColumn } from './styles/mixins'
 import { Header } from './components'
 import { LoadingPage } from './views'
+import { colors } from './styles/theme'
 
-const Document = props => {
-  if (props.apiData) {
-    return (
-      <Fragment>
-        <GlobalStyles/>
+const Document = props =>
+  <React.Fragment>
+    <GlobalStyles/>
+    {props.apiData &&
+      <React.Fragment> 
         <Header/>
         <Main>
           {props.children}
         </Main>
-      </Fragment>
-    )
-  } else {
-    return <LoadingPage/>
-  }
-}
+      </React.Fragment>
+    }
+  </React.Fragment>
 
 export default connect(
   state => ({
@@ -60,7 +58,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 300;
     font-style: normal;
     text-decoration: none;
-    
+    background-color: ${colors.black};
   }
   ::-webkit-input-placeholder,
   ::-moz-placeholder {
