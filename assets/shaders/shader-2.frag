@@ -9,7 +9,7 @@ uniform float u_time;
 vec4 colorForDistance(in float dist) {
     const float pi = 3.14159;
 
-    float shade = 1.0 / (dist + u_mouse.y);
+    float shade = 1.0 / (dist + 1.0);
     float modulator = pow(dist, 1.35);
 
     float red = clamp(abs(sin(modulator * shade - 0.25*pi)), 0.0, 1.0);
@@ -22,7 +22,7 @@ vec4 colorForDistance(in float dist) {
 void main() {
 	vec2 uv = gl_FragCoord.xy / u_resolution.xy;
   
-  float time = u_mouse.x*u_time;
+  float time = 100.1*u_time;
   float dist = distance(gl_FragCoord.xy, u_resolution.xy/2.0) + time + 3.0;
 	
   gl_FragColor = colorForDistance(dist);
