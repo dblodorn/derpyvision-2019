@@ -2,19 +2,29 @@ import React from 'react'
 import styled from 'styled-components'
 import { absoluteCentered, animationFadeIn } from '../styles/mixins';
 
-export default props =>
+export default () =>
   <LogoWrapper>
     <svg width="3517px" height="500px" viewBox="0 0 3517 377" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>DERPY VISION</title>
       <defs>
         <filter id="shadow" y="-1540%" x="-150%" height="3500%" width="300%">
-          <feTurbulence type="turbulence" baseFrequency="0.15"
+          <feTurbulence type="turbulence" baseFrequency="0.5"
             numOctaves="5" result="turbulence"/>
-          <feDisplacementMap in2="turbulence" in="SourceGraphic"
-            scale="50" xChannelSelector="R" yChannelSelector="G"/>
+          <feDisplacementMap id="disp" in2="turbulence" in="SourceGraphic"
+            scale="10" xChannelSelector="R" yChannelSelector="G"/>
           <feDropShadow dx="12" dy="20" stdDeviation="40"/>
         </filter>
+        
       </defs>
+      <animate 
+        xlinkHref="#disp"
+        attributeType="XML"
+        attributeName="scale"
+        from="1000"
+        to="10"
+        dur="10s"
+        repeatCount="0"
+      />
       <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" filter={`url(#shadow)`}>
         <g id="Derpy-Vision-Long" fillRule="nonzero" fill="pink">
           <g id="Group" transform="translate(23.000000, 41.000000)">
@@ -30,8 +40,10 @@ export default props =>
 const LogoWrapper = styled.div`
   ${animationFadeIn(1000, 250)}
   width: 65vw;
+  max-width: 65rem;
   height: 100%;
   position: relative;
+  margin: auto;
   svg {
     ${absoluteCentered};
     width: 100%;
