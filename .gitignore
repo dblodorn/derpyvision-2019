@@ -14,7 +14,6 @@ deploy.json
 *.njsproj
 *.sln
 deploy.json
-api/
 api/deploy.json
 api/node_modules
 .env
