@@ -7,9 +7,7 @@ import { Head, Logo } from './../components'
 const Home = props => 
   <Fragment>
     <Head title={`Welcome`} />
-    <HomeSplash>
-      <Logo/>
-    </HomeSplash>
+    <HomeSplash></HomeSplash>
   </Fragment>
 
 export default connect(

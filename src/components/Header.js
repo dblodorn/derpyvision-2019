@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import Logo from './Logo'
 import { flexCenteredAll } from './../styles/mixins'
+import { heights } from './../styles/theme'
 import { meta_defaults } from './../../config.json'
 
 const Header = props => 
@@ -18,7 +19,7 @@ export default connect(
 const HeaderWrapper = styled.header`
   ${flexCenteredAll};
   width: 100vw;
-  height: 100vh;
+  height: ${heights.header};
   position: fixed;
   top: 0;
   left: 0;
